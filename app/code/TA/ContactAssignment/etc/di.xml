@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="TA\ContactAssignment\Model\ResourceModel\ContactAssignment\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">tadigital_contactassignment</argument>
+            <argument name="resourceModel" xsi:type="string">TA\ContactAssignment\Model\ResourceModel\ContactAssignmentFactory</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ta_contact_listing_data_source" xsi:type="string">TA\ContactAssignment\Model\ResourceModel\ContactAssignment\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

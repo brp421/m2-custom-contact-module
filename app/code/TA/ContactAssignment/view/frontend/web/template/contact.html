@@ -1,0 +1,69 @@
+<!--
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+-->
+
+<div class="contactassignment-wrapper" data-block="contactassignment">
+    <div class="block-content">
+        <h2 data-bind="i18n:'Contact Form'"></h2>
+        <form data-role="save"
+              data-bind="submit:save"
+              method="post">
+            <div class="fieldset" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+            	<div class="field field-name required">
+                    <label for="contact-name" class="label"><span data-bind="i18n: 'Name'"></span></label>
+                    <div class="control">
+                        <input type="text"
+                               class="input-text"
+                               id="contact-name"
+                               name="name"
+                               data-validate="{required:true}"
+                               autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="field field-email required">
+                    <label class="label" for="contact-email"><span data-bind="i18n: 'Email'"></span></label>
+                    <div class="control">
+                        <input type="email"
+                               class="input-text"
+                               id="contact-email"
+                               name="email"
+                               data-validate="{required:true}" />
+                    </div>
+                </div>
+                <div class="field field-telephone required">
+                    <label for="contact-telephone" class="label"><span data-bind="i18n: 'Telephone'"></span></label>
+                    <div class="control">
+                        <input type="text"
+                               class="input-text"
+                               id="contact-telephone"
+                               name="telephone"
+                               data-validate="{required:true}"
+                               autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="field field-message required">
+                    <label for="contact-message" class="label"><span data-bind="i18n: 'Message'"></span></label>
+                    <div class="control">
+                        <textarea
+                        	   rows="5"
+                        	   cols="20"
+                               class="input-text"
+                               id="contact-message"
+                               name="message"
+                               data-validate="{required:true}"
+                               autocomplete="off"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="action action-save secondary"><span data-bind="i18n: 'Save'"></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

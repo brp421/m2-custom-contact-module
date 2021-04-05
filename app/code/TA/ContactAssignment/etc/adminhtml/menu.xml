@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="TA_ContactAssignment::contactassignment" title="TA Digital" module="TA_ContactAssignment" sortOrder="40" resource="TA_ContactAssignment::contactassignment"/>
+        <add id="TA_ContactAssignment::contactlist" title="Contact Assignment" parent="TA_ContactAssignment::contactassignment" module="TA_ContactAssignment" sortOrder="40" action="contactassignment/contact/index" resource="TA_ContactAssignment::contactlist"/>
+    </menu>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="TA_ContactAssignment" setup_version="1.0.0" />
+</config>

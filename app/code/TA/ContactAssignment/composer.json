@@ -1,0 +1,20 @@
+{
+    "name": "tadigital/module-contact-assignment",
+    "description": "Contact Form Module Assignment by TA Digital",
+    "require": {
+        "php": "^7.4.15"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Commercial"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "TA\\ContactAssignment\\": ""
+        }
+    }
+}

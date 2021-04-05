@@ -1,0 +1,45 @@
+<?php
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+
+/** @var \TA\ContactAssignment\Block\ContactAssignment $block */
+?>
+<?php if ($block->getPagerHtml()): ?>
+    <div class="contact-toolbar toolbar top"><?php echo $block->getPagerHtml(); ?></div>
+<?php endif ?>
+<?php $contacts = $block->getContactCollection(); ?>
+<?php if ($contacts && sizeof($contacts)): ?>
+    <div class="table-wrapper contact-list">
+        <h2><?= $block->escapeHtml(__('Contact List')) ?></h2>
+        <table class="data table table-contact-list" id="my-contact-table">
+            <caption class="table-caption"><?php echo __('Contact List') ?></caption>
+            <thead>
+            <tr>
+                <th scope="col" class="col name"><?php echo __('Name') ?></th>
+                <th scope="col" class="col email"><?php echo __('Email') ?></th>
+                <th scope="col" class="col telephone"><?php echo __('Telephone') ?></th>
+                <th scope="col" class="col message"><?php echo __('Message') ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($contacts as $contact): ?>
+                <tr>
+                    <td data-th="<?= $block->escapeHtml(__('Name')) ?>" class="col name-data"><?= $contact->getName() ?></td>
+                    <td data-th="<?= $block->escapeHtml(__('Email')) ?>" class="col email-data"><?= $contact->getEmail() ?></td>
+                    <td data-th="<?= $block->escapeHtml(__('Telephone')) ?>" class="col telephone-data"><?= $contact->getTelephone() ?></td>
+                    <td data-th="<?= $block->escapeHtml(__('Message')) ?>" class="col message-data"><?= $contact->getMessage() ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="contact-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+<?php else: ?>
+    <div class="message info empty"><span><?php echo __('No record found.'); ?></span></div>
+<?php endif ?>

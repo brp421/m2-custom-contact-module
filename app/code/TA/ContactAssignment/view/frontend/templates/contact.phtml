@@ -1,0 +1,25 @@
+<?php
+/**
+ * @author Bhumik R Panchal
+ * @copyright Copyright (c) 2021 TA Digital (https://www.tadigital.com)
+ * @package TA_ContactAssignment
+ */
+
+/** @var \TA\ContactAssignment\Block\ContactAssignment $block */
+?>
+<div id="contact-assignment" data-bind="scope:'contactassignment'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#contact-assignment": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "contactassignment": {
+                        "component": "TA_ContactAssignment/js/contact-assignment"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>

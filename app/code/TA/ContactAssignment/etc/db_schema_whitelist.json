@@ -1,0 +1,14 @@
+{
+    "tadigital_contactassignment": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "telephone": true,
+            "message": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
