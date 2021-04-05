@@ -1,7 +1,7 @@
 # m2-custom-contact-module
 This module creates a custom form on storefront. Magento Admin can see all contact information in Grid.
 
-#Installation 
+# Installation 
 
 1. Extract TA_ContactAssignment.zip
 2. Copy "TA" folder and paste it into app/code directory of your magento 2 setup
